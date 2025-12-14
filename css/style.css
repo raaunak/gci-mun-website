@@ -1031,12 +1031,10 @@ img{
     transition: opacity 0.3s ease;
 }
 
-.member-photo:hover img {
-    transform: scale(1.05);
-}
+
 
 .member-photo:hover .photo-overlay {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .member-info {
