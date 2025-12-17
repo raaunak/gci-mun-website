@@ -3,7 +3,7 @@
   const galleryData = [
     {
       year: 2024,
-      img: "images/Mun 2024 Gallery.jpg",
+      img: "images/IMG_0433.JPG",
       link: "https://drive.google.com/drive/folders/17NH_5ObiSyKdAn4MOMBVINDXH5nDItg8",
       alt: "Gallery image for 2024"
     },

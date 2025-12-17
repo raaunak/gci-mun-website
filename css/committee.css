@@ -1,0 +1,84 @@
+/* Committees Section */
+
+
+/* Grid Layout */
+.committees-grid {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Committee Box */
+.committee-box {
+    position: relative;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+    transition: 0.3s ease;
+    align-items: center;     /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    text-align: center;
+}
+
+.committee-box h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.committee-box p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+.committee-box h3,
+.committee-box p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Dark overlay */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;   /* Make overlay stay behind text */
+    transition: 0.3s ease;
+}
+
+/* Hover Effects */
+.committee-box:hover {
+    transform: scale(1.03);
+}
+
+.committee-box:hover .overlay {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .committees-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .committees-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column;
+        text-align: left;
+    }
+}

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="shortcut icon" href="images/munlogo.png" type="ïmage/x-icon">
 </head>
 
@@ -212,31 +213,33 @@
             <p>Website Designed by Raunak Shrestha</p>
         </div>
     </section>
+
+
     <script src="js/Gallery.js"></script>
     <script src="js/countdown.js"></script>
     <script src="js/include-navbar.js"></script>
     <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const currentPath = window.location.pathname;
-    const navLinks = document.querySelectorAll(".navbar .main-menu a");
+        document.addEventListener("DOMContentLoaded", () => {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll(".navbar .main-menu a");
 
-    navLinks.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
+            navLinks.forEach(link => {
+            const linkPath = new URL(link.href).pathname;
 
-      if (linkPath === currentPath) {
-        link.classList.add("active");
+            if (linkPath === currentPath) {
+                link.classList.add("active");
 
-        // If inside dropdown, underline parent (Conference)
-        const dropdown = link.closest(".dropdown");
-        if (dropdown) {
-          dropdown.closest("li")
-            .querySelector("span")
-            ?.classList.add("active");
-        }
-      }
-    });
-  });
-</script>
+                // If inside dropdown, underline parent (Conference)
+                const dropdown = link.closest(".dropdown");
+                if (dropdown) {
+                dropdown.closest("li")
+                    .querySelector("span")
+                    ?.classList.add("active");
+                }
+            }
+            });
+        });
+    </script>
 
 </body>
 </html>

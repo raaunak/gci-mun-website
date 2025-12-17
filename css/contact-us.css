@@ -1,0 +1,120 @@
+/* Contact Us Section */
+.contact-us-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--lightred-color);
+}
+
+.contact-subtext {
+    font-family: 'Lora';
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Left column (contact info) */
+.contact-info {
+    flex: 1 1 350px;
+    text-align: left;
+}
+
+.contact-info ul {
+    margin-top: 40px;
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.contact-info strong {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--primary-darkblue-color);
+}
+
+.contact-info span {
+    color: #4aafe2;
+}
+
+/* Form container */
+.contact-form {
+    margin-top: 40px;
+    flex: 1 1 350px;
+    padding: 10px; /* keep spacing but NO background */
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* Input groups */
+.form-group {
+    margin-bottom: 22px;
+    text-align: left;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs + textarea */
+.contact-form input,
+.contact-form textarea {
+    width: clamp(115%,120%,120%);
+    padding: 12px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #fff; /* keep fields white */
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus state */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--lightblue-color, #3083DC);
+    box-shadow: 0 0 5px rgba(48,131,220,0.3);
+    outline: none;
+}
+
+/* Submit button */
+.contact-submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--lightblue-color, #3083DC);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.contact-submit-btn:hover {
+    background: var(--primary-darkblue-color, #001E54);
+}

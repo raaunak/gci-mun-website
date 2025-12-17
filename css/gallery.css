@@ -1,0 +1,81 @@
+/* New Gallery seciton */
+.new-gallery-section {
+    padding: 80px 20px;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.new-gallery-heading {
+    font-size: clamp(1.2rem, 5rem, 6rem);
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--lightred-color);
+}
+
+.new-gallery-subtext {
+    font-size: clamp(16px, 2vw, 22px);
+    margin-bottom: 40px;
+    opacity: 0.8;
+    font-family: 'Lora', serif;
+}
+
+.new-gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.new-gallery-card {
+    flex: 1 1 45%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* IMAGE WRAPPER (for overlay effect) */
+.new-gallery-image-wrapper {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* IMAGE */
+.new-gallery-image-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* BLUE OVERLAY (full image) */
+.new-gallery-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    
+    z-index: 1;
+    pointer-events: none;
+}
+
+.new-gallery-image-wrapper:hover img {
+    filter: blur(50px);
+    filter: brightness(70%);
+}
+
+/* YEAR TEXT BELOW IMAGE */
+.new-gallery-year {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--lightblue-color);
+    font-family: 'Lora', serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .new-gallery-card {
+        flex: 1 1 100%;
+    }
+}

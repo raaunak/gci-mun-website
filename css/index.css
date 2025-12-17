@@ -1,0 +1,524 @@
+/* Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+        linear-gradient(rgba(4, 25, 95, 0.75), rgba(7, 20, 73, 0.5)), 
+        url('../images/DSC09161.jpg');
+    background-size: cover;          /* ensures image stretches */
+    background-position: center;     /* centers the image */
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-content{
+    position: relative; /* above overlay */
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 0 20px; /* for small screens */
+
+}
+
+.hero-heading{
+    text-align: center;
+    color: #fff;
+    margin-bottom: -20px;
+    font-size: clamp(4rem, 8rem,10rem);
+}
+
+.hero-text{
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.2;
+    font-weight:400 ;
+   
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-btn{
+    
+    display:inline-block;
+    padding: 10px 40px;
+    background: var(--lightred-color);
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+    
+}
+
+.hero-btn:hover{
+    opacity:0.8f;
+    background: #FF4588;
+}
+/* Countdown styles (updated for 4 columns) */
+.countdown-section {
+  padding: 48px 0;
+  margin-top: 50px;
+}
+.countdown-inner { text-align: center; }
+.countdown-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.1rem,3rem, 3rem);
+  margin-bottom: 18px;
+  color: black;
+}
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 12px;
+}
+.countdown-card {
+  background: #fff;
+  padding: 18px 22px;
+  min-width: 140px;
+  border-radius: 12px;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.countdown-number {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.5rem, 4rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  transition: transform 180ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+/* tick animation: scale briefly */
+.countdown-number.tick {
+  transform: scale(1.08);
+}
+/* label */
+.countdown-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #666;
+}
+.countdown-note {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #333;
+}
+/* responsive */
+@media (max-width: 880px) {
+  .countdown-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .countdown-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .countdown-card { min-width: auto; padding: 14px; }
+}
+
+/* Full-screen event banner (hidden by default) */
+#eventBanner {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(7,20,73,0.85);
+  color: #fff;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 260ms ease, visibility 260ms ease;
+  padding: 24px;
+  text-align: center;
+}
+#eventBanner.show {
+  opacity: 1;
+  visibility: visible;
+}
+#eventBanner .banner-inner {
+  max-width: 820px;
+  padding: 24px;
+  border-radius: 12px;
+}
+#eventBanner h1 { margin: 0 0 12px; font-size: clamp(1.6rem, 3.2rem, 2.8rem); }
+#eventBanner p { margin: 0 0 16px; font-size: 1.05rem; }
+#eventBanner .banner-close {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+#eventBanner .banner-close:active { transform: translateY(1px); }
+/* Letter */
+/* ---------- Desktop / base ---------- */
+.letter {
+    margin-top: 20px;
+    padding-block: 80px;
+    margin-bottom: -40px;
+    background-color: #162352;
+}
+
+/* container: side-by-side on wide screens */
+.letter .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    flex-wrap: nowrap;
+    
+}
+
+/* left / text column */
+.letter-text-content{
+    flex:1 1 500px;
+    max-width: 500px;
+    text-align: left;
+    color: white;
+}
+
+/* paragraphs */
+.letter-content{
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* heading */
+.letter-heading{
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* right / image & signature column */
+.letter-right-content{
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    color: white;
+    margin-top: clamp(20px, 6vw, 80px);
+}
+
+/* ---------- FIX: correct selector for the image ---------- */
+/* your original used .letter-right img which didn't match the markup */
+.letter-right-content img {
+    /* remove weird large padding-top so image sits naturally */
+    padding-top: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* signature text */
+.letter-secgen-text{
+    font-size: 1.25rem;
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-weight: 600;
+}
+
+/* ---------- RESPONSIVE: mobile & small tablets ---------- */
+@media (max-width: 768px) {
+    .letter {
+        margin-top: 40px;
+        padding-block: 40px;
+        margin-bottom: 0;
+    }
+
+    /* stack vertically, keep text first (letter above image) */
+    .letter .container {
+        flex-direction: column;
+        align-items: stretch; /* let children be full width */
+        gap: 24px;
+        padding-inline: 16px; /* small page padding on mobile */
+    }
+
+    .letter-text-content {
+        max-width: 100%;
+        order: 1; /* ensure text stays before image */
+        text-align: left;
+    }
+
+    .letter-right-content {
+        max-width: 100%;
+        margin-top: 0;
+        order: 2; /* image & signature after text */
+        text-align: center;
+        padding-bottom: 8px;
+    }
+
+    /* make image a good mobile width and visually balanced */
+    .letter-right-content img {
+        width: min(320px, 80%); /* won't get too huge on narrow screens */
+        margin: 12px auto 8px;
+        border-radius: 8px;
+    }
+
+    /* slightly smaller, readable type on mobile */
+    .letter-heading {
+        font-size: 1.25rem; /* adjust if you use utility classes already */
+        margin-bottom: 18px;
+    }
+
+    .letter-content {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .letter-secgen-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* optional: very small phones */
+@media (max-width: 380px) {
+    .letter-right-content img {
+        width: 88%;
+    }
+
+    .letter-heading {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* ---------- Learn More Section ---------- */
+.learn-more {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+}
+
+.learn-more-text {
+    font-size: clamp(50px, 12vw, 150px); 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    opacity: 0.75;
+    color:#de0004;
+    
+    text-align: center;
+    margin-top: -80px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 45px, 50px);
+    flex-wrap: nowrap;
+}
+
+.card {
+    background: #ccc;
+    border-radius: 6px;
+    flex: 0 1 320px;
+    aspect-ratio: 1/1; /* square cards */
+    max-width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.25);
+}
+
+.card-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* height of gradient */
+    background: linear-gradient(to top, rgba(0, 123, 255, 0.6), rgba(0,123,255,0));
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    z-index: 2;
+}
+
+.learn-more-sentence {
+    margin-top: 25px;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    opacity: 0.75;
+    font-size: clamp(16px, 1rem, 40px);
+    text-align: center;
+}
+
+/* ---------- Responsive for Mobile ---------- */
+@media (max-width: 768px) {
+    .card-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 90%;
+        flex: unset;
+        aspect-ratio: 1/1; /* keep square shape */
+    }
+
+    .learn-more-text {
+        font-size: clamp(60px, 10vw, 60px);
+        margin-top: -40px;
+    }
+
+    .learn-more-sentence {
+        font-size: clamp(14px, 4vw, 24px);
+        margin-top: 20px;
+    }
+}
+
+/* gallery - index */
+/* ---------- Gallery styles ---------- */
+.gallery-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 150px;
+  color: #041959; 
+  
+}
+.gallery-section {
+   
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.gallery-wrapper {
+  display: flex;
+  align-items: center;
+  gap: clamp(50px,90px, 100px);
+}
+
+/* arrow buttons */
+.gallery-btn {
+  width: 58px;
+  height: 58px;
+  
+  border-radius: 40px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.12s ease, opacity 0.12s ease;
+  user-select: none;
+}
+.gallery-btn:active { transform: translateY(1px); }
+.gallery-btn[disabled], .gallery-btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* center panel */
+.gallery-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* <— fixes vertical alignment issues */
+}
+
+/* square image wrapper */
+.gallery-image-wrap {
+  width: min(70vw, 800px);
+  aspect-ratio: 2 / 1;
+  min-height: 300px;       /* <— ensures stable height */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+}
+.gallery-image-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* the image */
+.gallery-image-wrap a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform-origin: center;
+  transition: transform 360ms ease, opacity 360ms ease;
+  will-change: transform, opacity;
+}
+
+/* slide-in animation classes applied by JS */
+.gallery-image-wrap.is-animating img.slide-left-enter  { transform: translateX(20px); opacity: 0; }
+.gallery-image-wrap.is-animating img.slide-right-enter { transform: translateX(-20px); opacity: 0; }
+.gallery-image-wrap img { transform: translateX(0); opacity: 1; }
+
+/* year label below image */
+.gallery-year {
+  font-family: 'Poppins';
+  font-size: clamp(1rem, 2rem, 4rem);
+  color: var(--lightblue-color);
+  background: rgba(255,255,255,0.95);
+  padding: 6px 14px;
+  font-weight: 500;
+  
+  
+}
+
+/* small screens: shrink arrows and gaps */
+@media (max-width: 600px) {
+  .gallery-wrapper { gap: 12px; }
+  .gallery-btn { width: 40px; height: 40px; font-size: 16px; }
+  .gallery-image-wrap { max-width: 320px; }
+}
