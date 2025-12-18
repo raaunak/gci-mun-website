@@ -20,74 +20,132 @@
 <body>
     <div id="site-navbar" aria-hidden="true"></div>
     <!-- Registration Section -->
-    <section id="registration" class="registration-section">
-        <div class="container reg-inner">
-            <h2 class="reg-title">Registration</h2>
-            <p class="reg-intro">
-            Register for GCI MUN 2026. Choose the category that best fits your participation — individual delegate, school delegation, or apply to join our Executive Board. Click each registration button to complete the Google Form.
-            </p>
-
-            <div class="reg-grid" role="list">
-            <!-- Delegate -->
-            <article class="reg-card" role="listitem" aria-labelledby="reg-delegate-title">
-                <h3 id="reg-delegate-title" class="reg-card-title">Early Bird Delegate Registration</h3>
-                <p class="reg-price">Price: <strong>NRs 3,200</strong> per delegate</p>
-                <p class="reg-desc">
-                Individual delegates: includes conference materials, access to all plenaries and committee sessions, two meals, and certificate.
-                </p>
-                <a class="reg-btn" href="https://forms.gle/YOUR_DELEGATE_FORM" target="_blank" rel="noopener">
-                Register as Delegate
-                </a>
-                <div class="reg-card-note">
-                <p>Early Bird Registration closes on January 1, 2026.</p>
-                <p>Late registrations accepted with an additional fee subject to availability.</p>
-                </div>
-            </article>
-
-            <!-- Group -->
-            <article class="reg-card" role="listitem" aria-labelledby="reg-group-title">
-                <h3 id="reg-group-title" class="reg-card-title">Group / School Registration</h3>
-                <p class="reg-price">Price: <strong>NRs 3,000</strong> per group (up to 8 delegates)</p>
-                <p class="reg-desc">
-                Group packages include priority seating for all delegates, and a discount on additional delegates.
-                </p>
-                <a class="reg-btn" href="https://forms.gle/YOUR_GROUP_FORM" target="_blank" rel="noopener">
-                Register as Group
-                </a>
-                <div class="reg-card-note">
-                    <p>Group registration deadline: February 16, 2026.</p>
-                </div>
-            </article>
-
-            <!-- Executive Board -->
-            <article class="reg-card" role="listitem" aria-labelledby="reg-eb-title">
-                <h3 id="reg-eb-title" class="reg-card-title">Executive Board Application</h3>
-                <p class="reg-price">Stipend & responsibilities vary</p>
-                <p class="reg-desc">
-                Apply to join the Executive Board. Successful applicants will recieve a letter of appointment.
-                </p>
-                <a class="reg-btn" href="https://forms.gle/YOUR_EB_FORM" target="_blank" rel="noopener">
-                Apply for Exec Board
-                </a>
-                <div class="reg-card-note">
-                <p>Applications reviewed on a rolling basis.</p>
-                <p>Final decisions announced by December 20, 2026.</p>
-                </div>
-            </article>
-            </div>
-
-        <!-- Dates & Deadlines -->
-        <div class="reg-deadlines" aria-live="polite">
-            <h4 class="deadlines-title">Important dates & deadlines</h4>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
-            <p><strong>January 15, 2026: </strong> Registration (early bird) ends.</p>
+    <section class="page-header" style="background-image: url('images/Conference.jpg');">
+        <div class="page-header-content">
+                <h2>Registration</h2>
+                
         </div>
-    </div>
     </section>
+    <section id="registration" class="registration-section">
+    <div class="container reg-inner">
+
+        <!-- Registration Header & Buttons -->
+        <p class="reg-intro">
+            Register for GCI MUN 2026. Choose the category that best fits your participation. Click a button to jump to the corresponding registration section.
+        </p>
+
+        <div class="reg-nav-buttons">
+            <a href="#delegate" class="reg-btn">Individual Delegate</a>
+            <a href="#group" class="reg-btn">School / Group</a>
+            <a href="#intl-delegation" class="reg-btn">International Delegation</a>
+            <a href="#residential" class="reg-btn">Residential Delegation</a>
+        </div>
+
+        <!-- INDIVIDUAL DELEGATE -->
+        <div id="delegate" class="reg-card-section">
+            <h3 class="reg-card-title">Individual Delegate Registration</h3>
+            <p class="reg-price">Price: <strong>NRs 3,200</strong> per delegate</p>
+            <p class="reg-desc">
+                Individual delegates receive access to all sessions, conference materials, plenaries, two meals, and a certificate.
+            </p>
+            <a class="reg-btn" href="https://forms.gle/YOUR_DELEGATE_FORM" target="_blank">Register as Delegate</a>
+        </div>
+        <hr>
+
+        <!-- GROUP / SCHOOL -->
+        <div id="group" class="reg-card-section">
+            <h3 class="reg-card-title">Group / School Registration</h3>
+            <p class="reg-price">Price: <strong>NRs 3,000</strong> per group (up to 8 delegates)</p>
+            <p class="reg-desc">
+                Group packages include priority seating for all delegates and a discount on additional delegates.
+            </p>
+            <a class="reg-btn" href="https://forms.gle/YOUR_GROUP_FORM" target="_blank">Register as Group</a>
+        </div>
+        <hr>
+
+        <!-- INTERNATIONAL DELEGATION -->
+        <div id="intl-delegation" class="reg-card-section">
+            <h3 class="reg-card-title">International Delegation Registration</h3>
+            <p class="reg-price">Pricing & Support Available</p>
+            <p class="reg-desc">
+                International delegations gain full conference access plus orientation support, welcome kits, and guidance for travel logistics.
+            </p>
+            <a class="reg-btn" href="https://forms.gle/YOUR_INTL_FORM" target="_blank">Register International Delegation</a>
+
+            <!-- International Details Block -->
+            <div class="delegate-details">
+                <h4>Travel & Flight Guidance</h4>
+                <p>
+                    Delegates travelling internationally should plan arrival at <strong>Tribhuvan International Airport (KTM)</strong>. We recommend booking flights early for best rates. Arrival assistance can be provided on request.
+                </p>
+
+                <h4>Accommodation Options</h4>
+                <ul>
+                    <li><strong>Hotel Yak & Yeti:</strong> Premium option near conference venue</li>
+                    <li><strong>Kathmandu Guest House:</strong> Mid-range with cultural charm</li>
+                    <li><strong>Hotel Shanker:</strong> Historic hotel with excellent service</li>
+                </ul>
+                <p>
+                    Optional discounted rates may be available for international delegations. Contact <a href="mailto:gcimun@gci.edu.np">gcimun@gci.edu.np</a> for group bookings.
+                </p>
+
+                <h4>Pricing & Assistance</h4>
+                <p>
+                    International delegates may be eligible for travel grants or sponsorship letters upon request. Provide your travel itinerary early to secure stock letters.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- RESIDENTIAL DELEGATION -->
+        <div id="residential" class="reg-card-section">
+            <h3 class="reg-card-title">Residential Delegation Registration</h3>
+            <p class="reg-price">Includes Accommodation + Meals</p>
+            <p class="reg-desc">
+                Residential delegates enjoy on-campus accommodation, meals during conference days, and access to all sessions.
+            </p>
+            <a class="reg-btn" href="https://forms.gle/YOUR_RESIDENTIAL_FORM" target="_blank">Register Residential Delegation</a>
+
+            <!-- Residential Details Block -->
+            <div class="delegate-details">
+                <h4>Accommodation & Meals</h4>
+                <p>
+                    Accommodation is provided in safe and comfortable dorms near the conference venue. Meal plans include breakfast, lunch, and dinner for the duration of your stay.
+                </p>
+
+                <h4>Local Travel</h4>
+                <p>
+                    Residential delegates receive complimentary local transport to/from the venue. Shuttle services operate each day before sessions begin.
+                </p>
+
+                <h4>Pricing Details</h4>
+                <p>
+                    Pricing includes accommodation for all conference nights + three meals daily + conference materials. Group discounts available upon request.
+                </p>
+
+                <h4>Support & Contacts</h4>
+                <p>
+                    For assistance with booking, travel questions, or itinerary support, email <a href="mailto:gcimun@gci.edu.np">gcimun@gci.edu.np</a>.
+                </p>
+            </div>
+        </div>
+        <hr>
+
+        <!-- PAYMENT DETAILS -->
+        <div class="reg-card-section">
+            <h3 class="reg-card-title">Payment Details</h3>
+            <p class="reg-desc">
+                All payments should be made via bank transfer to the official GCI MUN account. Please email your payment confirmation and transaction ID to <a href="mailto:gcimun@gci.edu.np">gcimun@gci.edu.np</a>.
+            </p>
+            <p class="reg-desc">
+                Payment deadlines will be updated closer to the conference. Late payments may be subject to additional fees.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
 
     <section class="footer">
         <div class="footer-gci-logo">

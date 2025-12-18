@@ -1,0 +1,130 @@
+/* =========================
+   RESOURCES SECTION
+========================= */
+
+.resources-section {
+  padding-top: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+   FULL WIDTH BACKGROUND
+========================= */
+
+.full-width-bg {
+    width: 100vw;          /* full viewport width */
+    padding: 80px 0;       /* vertical spacing */
+}
+
+.conference-bg {
+    background: #f3f6ff;
+}
+
+.preparation-bg {
+    background: #fff5f5;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.resource-subtitle {
+    font-size: 3rem;
+    margin-bottom: 45px;
+}
+
+.conference-bg .resource-subtitle {
+    color: #003399;
+}
+
+.preparation-bg .resource-subtitle {
+    color: #a32121;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+/* =========================
+   ITEMS
+========================= */
+
+.resource-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* =========================
+   OUTLINE BUTTON
+========================= */
+
+.resource-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    border-radius: 30px;
+    background: transparent;
+    border: 2px solid #003399;
+    color: #003399;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.preparation-bg .resource-btn {
+    border-color: #a32121;
+    color: #a32121;
+}
+
+.resource-btn:hover {
+    background-color: currentColor;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.resources-divider {
+    width: 65%;
+    height: 1px;
+    background: rgba(0,0,0,0.15);
+    margin: 70px auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .resource-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .resource-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .full-width-bg {
+        padding: 60px 0;
+    }
+}
