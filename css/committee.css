@@ -3,6 +3,8 @@
 
 /* Grid Layout */
 .committees-grid {
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -59,7 +61,7 @@
 }
 
 .committee-box:hover .overlay {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.75);
 }
 
 /* Responsive */

@@ -13,7 +13,7 @@
 
 /* Section Title */
 .reg-title {
-    font-size: clamp(2rem, 4rem, 4rem);
+    font-size: clamp(3rem, 5rem, 5rem);
     color: #0b6fbf;
     margin-bottom: 20px;
 }
@@ -60,12 +60,13 @@
 }
 
 .reg-card-title {
-    font-size: 1.8rem;
+    font-size: clamp(1rem,2.5rem,3rem);
     margin-bottom: 12px;
     color: #111;
 }
 
 .reg-price {
+    font-size: 1.25rem;
     font-weight: 600;
     color: #0b6fbf;
     margin-bottom: 12px;
